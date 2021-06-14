@@ -105,13 +105,13 @@
                 <el-button class="quickLink" @click="open_url('https://lceda.cn/')">立创EDA</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink"></el-button>
+                <el-button class="quickLink">EMAIL</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink"></el-button>
+                <el-button class="quickLink">BLOGS</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink"></el-button>
+                <el-button class="quickLink">NEWS</el-button>
               </el-col>
             </el-row>
 
