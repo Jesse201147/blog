@@ -1,10 +1,20 @@
 <template>
-nav
+  <HeadNav activeIndex='1'></HeadNav>
+  nav
 </template>
 
 <script>
+import HeadNav from "../components/HeadNav.vue";
+
 export default {
-name: "nav"
+  name: "nav",
+  components: {
+    HeadNav
+  },
+  data() {
+    return {
+    };
+  },
 }
 </script>
 
