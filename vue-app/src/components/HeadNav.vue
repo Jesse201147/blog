@@ -20,6 +20,11 @@
           <el-menu-item class="navText" index="2" @click="this.$router.push({ name: 'blog'})">Blog</el-menu-item>
         </div>
       </el-col>
+      <el-col :span="1">
+        <div class="grid-content bg-purple">
+          <el-menu-item class="navText" index="3" @click="this.$router.push({ name: 'gist'})">Gist</el-menu-item>
+        </div>
+      </el-col>
 
     </el-row>
 
@@ -38,10 +43,6 @@ export default {
       Index: this.activeIndex
     };
   },
-  methods: {
-    handleSelect(key, keyPath) {
-      console.log(key, keyPath);
-    }
-  }
+  methods: {}
 }
 </script>

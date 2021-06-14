@@ -1,7 +1,8 @@
 <template>
+
   <el-container class="maxHeight">
     <el-header style="padding: 0;">
-      <HeadNav :activeIndex="2"></HeadNav>
+      <HeadNav activeIndex="3"></HeadNav>
     </el-header>
     <el-row class="maxHeight">
       <el-col class="maxHeight" :span="4">
@@ -16,13 +17,14 @@
       </el-col>
     </el-row>
   </el-container>
+
 </template>
 
 <script>
 import HeadNav from "../components/HeadNav.vue";
 
 export default {
-  name: "blog",
+  name: "gist",
   components: {
     HeadNav
   },
