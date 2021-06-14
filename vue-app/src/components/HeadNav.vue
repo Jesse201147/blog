@@ -22,7 +22,7 @@
       </el-col>
       <el-col :span="1">
         <div class="grid-content bg-purple">
-          <el-menu-item class="navText" index="3" @click="this.$router.push({ name: 'gist'})">Gist</el-menu-item>
+          <el-menu-item class="navText" index="3" @click="this.$router.push({ name: 'gist'})">gist</el-menu-item>
         </div>
       </el-col>
 

@@ -35,20 +35,84 @@
               </el-col>
             </el-row>
             <el-row style="padding-top: 10%">
-              <el-col :span="3" :offset="3" style="background-color: brown"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
+              <el-col :span="3" :offset="3">
+                <el-button class="quickLink" @click="open_url('https://www.zhihu.com/')">知乎</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://weibo.com/')">微博</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://juejin.cn/')">掘金</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.bilibili.com/')">B站</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.youtube.com/')">油管</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.douyu.com/g_DOTA2')">斗鱼</el-button>
+              </el-col>
             </el-row>
             <el-row style="padding-top: 10px">
-              <el-col :span="3" :offset="3" style="background-color: brown"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
-              <el-col :span="3"  style="background-color: greenyellow"><el-button class="quickLink">默认按钮</el-button></el-col>
+              <el-col :span="3" :offset="3">
+                <el-button class="quickLink" @click="open_url('https://www.taobao.com/')">淘宝</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.jd.com/')">京东</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.1688.com/')">1688</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.smzdm.com/')">SMZDM</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink"></el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink"></el-button>
+              </el-col>
+            </el-row>
+            <el-row style="padding-top: 10px">
+              <el-col :span="3" :offset="3">
+                <el-button class="quickLink" @click="open_url('https://www.aliyun.com/')">ali官网</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://cloud.tencent.com/')">腾讯云</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://sg.godaddy.com/')">godaddy</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.aliyundrive.com/drive')">ali盘</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://drive.google.com/drive')">Colab</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://onedrive.live.com/')">oneDrive</el-button>
+              </el-col>
+            </el-row>
+            <el-row style="padding-top: 10px">
+              <el-col :span="3" :offset="3">
+                <el-button class="quickLink" @click="open_url('https://www.szlcsc.com/')">立创商城</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://www.jlc.com/')">立创PCB</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink" @click="open_url('https://lceda.cn/')">立创EDA</el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink"></el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink"></el-button>
+              </el-col>
+              <el-col :span="3">
+                <el-button class="quickLink"></el-button>
+              </el-col>
             </el-row>
 
           </div>
@@ -92,6 +156,9 @@ export default {
         url = "https://www.bing.com/search?q=" + this.input;
       }
       console.log(url);
+      window.open(url)
+    },
+    open_url(url) {
       window.open(url)
     }
   }

@@ -34,5 +34,9 @@ p{
 }
 .quickLink {
     margin: 5px;
+    width: 100px;
+    background-color: #4c4c4c;
+    color: #ffffff;
+    font-weight: 400;
 
 }
