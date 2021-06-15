@@ -22,7 +22,7 @@
                   <el-col :span="4" :offset="1" style="text-align: left;font-size:1rem">
                     {{ article.author }}
                   </el-col>
-                  <el-col :span="4" :offset="1" style="text-align: right">
+                  <el-col :span="4" :offset="14" style="text-align: right">
                     {{ formatDate(article.updated) }}
                   </el-col>
                 </el-row>
