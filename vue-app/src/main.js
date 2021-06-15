@@ -5,7 +5,11 @@ import App from './App.vue';
 import router from "./router";
 import './index.css'
 
-createApp(App)
-    .use(ElementPlus)
+let app = createApp(App)
+
+app
     .use(router)
+    .use(ElementPlus)
     .mount('#app')
+
+app.config.globalProperties.$apiUrl = 'http://53th.cn:3000';

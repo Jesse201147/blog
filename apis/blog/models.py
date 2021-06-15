@@ -1,6 +1,9 @@
+import json
+
 from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
+from rest_framework import serializers
 
 
 class ArticlePost(models.Model):
@@ -16,3 +19,19 @@ class ArticlePost(models.Model):
 
     def __str__(self):
         return self.title
+
+    def to_dict(self):
+        return dict(
+            id=self.id,
+            author=self.author.username,
+            title=self.title,
+            body=self.body,
+            created=str(self.created),
+            updated=str(self.updated),
+        )
+
+
+class ArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ArticlePost
+        fields = ('id', 'title', 'author', 'updated')
