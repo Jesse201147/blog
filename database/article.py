@@ -21,11 +21,11 @@ class Article(db.Model):
     title = db.Column(db.String(512))
     time_created = db.Column(db.Integer, default=str(datetime.datetime.now()).split(".")[0])
     tag = db.Column(db.String(512))
-    text = db.Column(db.text)
+    text = db.Column(db.Text)
     desc = db.Column(db.String(512))
 
     def __repr__(self):
-        return f"quickLink id-{self.id} title-{self.title} time_created-{self.time_created} tag-{self.tag} text-{self.text[:10]}"
+        return f"article id-{self.id} title-{self.title} time_created-{self.time_created} tag-{self.tag} text-{self.text[:10]}"
 
 
 if __name__ == '__main__':

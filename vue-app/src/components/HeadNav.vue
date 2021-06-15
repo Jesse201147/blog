@@ -12,7 +12,7 @@
 
       <el-col :span="1" :offset="1">
         <div class="grid-content bg-purple">
-          <el-menu-item class="navText" index="1" @click="this.$router.push({ name: 'nav'})">Nav</el-menu-item>
+          <el-menu-item class="navText" index="1" @click="this.$router.push({ name: 'nav'})">Home</el-menu-item>
         </div>
       </el-col>
       <el-col :span="1">
@@ -27,7 +27,6 @@
       </el-col>
 
     </el-row>
-
   </el-menu>
 </template>
 

@@ -51,7 +51,7 @@
                 <el-button class="quickLink" @click="open_url('https://www.youtube.com/')">油管</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink" @click="open_url('https://www.douyu.com/g_DOTA2')">斗鱼</el-button>
+                <el-button class="quickLink" @click="open_url('https://github.com/')">GitHub</el-button>
               </el-col>
             </el-row>
             <el-row style="padding-top: 10px">
@@ -68,24 +68,24 @@
                 <el-button class="quickLink" @click="open_url('https://www.smzdm.com/')">SMZDM</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink"></el-button>
+                <el-button class="quickLink" @click="open_url('https://www.douyu.com/g_DOTA2')">斗鱼</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink"></el-button>
+                <el-button class="quickLink" @click="open_url('https://www.huya.com/g/dota2')">虎牙</el-button>
               </el-col>
             </el-row>
             <el-row style="padding-top: 10px">
               <el-col :span="3" :offset="3">
-                <el-button class="quickLink" @click="open_url('https://www.aliyun.com/')">ali官网</el-button>
+                <el-button class="quickLink" @click="open_url('https://www.aliyun.com/')">阿里云</el-button>
               </el-col>
               <el-col :span="3">
                 <el-button class="quickLink" @click="open_url('https://cloud.tencent.com/')">腾讯云</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink" @click="open_url('https://sg.godaddy.com/')">godaddy</el-button>
+                <el-button class="quickLink" @click="open_url('https://sg.godaddy.com/')">GoDaddy</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink" @click="open_url('https://www.aliyundrive.com/drive')">ali盘</el-button>
+                <el-button class="quickLink" @click="open_url('https://www.aliyundrive.com/drive')">阿里云盘</el-button>
               </el-col>
               <el-col :span="3">
                 <el-button class="quickLink" @click="open_url('https://drive.google.com/drive')">Colab</el-button>
@@ -105,15 +105,16 @@
                 <el-button class="quickLink" @click="open_url('https://lceda.cn/')">立创EDA</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink">EMAIL</el-button>
+                <el-button class="quickLink" @click="open_url('https://mail.google.com/')">Gmail</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink">BLOGS</el-button>
+                <el-button class="quickLink" @click="open_url('https://mail.qq.com/')">QQ邮箱</el-button>
               </el-col>
               <el-col :span="3">
-                <el-button class="quickLink">NEWS</el-button>
+                <el-button class="quickLink" @click="open_url('https://mail.163.com/')">163邮箱</el-button>
               </el-col>
             </el-row>
+
 
           </div>
         </div>

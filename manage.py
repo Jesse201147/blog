@@ -1,31 +1,13 @@
-#!/usr/bin/python
-# coding:utf-8
+from flask_script import Manager
+from flask_migrate import Migrate
 
-import os
-from flask_migrate import Migrate, MigrateCommand
-from flask_script import Manager, Shell, Server
-from app import create_app, db
+from startup import app, db
 
-app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 manager = Manager(app)
+# Migrate() 需要绑定app 和 db
 migrate = Migrate(app, db)
-
-
-def make_shell_context():
-    return dict(app=app, db=db)
-
-
-manager.add_command("shell", Shell(make_context=make_shell_context))
-manager.add_command("db", MigrateCommand)
-
-
-@manager.command
-def test():
-    """run the unit tests."""
-    import unittest
-    tests = unittest.TestLoader().discover('tests')
-    unittest.TextTestRunner(verbosity=2).run(tests)
-
+# 子命令  MigrateCommand 包含三个方法 init migrate upgrade
+manager.add_command('db', MigrateCommand)
 
 if __name__ == '__main__':
     manager.run()
