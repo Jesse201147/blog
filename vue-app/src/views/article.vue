@@ -1,7 +1,8 @@
 <template>
+
   <el-container class="maxHeight">
     <el-header style="padding: 0;">
-      <HeadNav activeIndex="2"></HeadNav>
+      <HeadNav activeIndex='2'></HeadNav>
     </el-header>
     <el-row class="maxHeight">
       <el-col class="maxHeight" :span="4">
@@ -9,27 +10,16 @@
       </el-col>
       <el-col :span="14">
         <div class="grid-content bg-purple-light maxHeight" style="background-color: #888888">
-          <el-row v-for="article in articles">
-            <el-col :span="22" :offset="1">
-              <el-card shadow="hover" style="margin-top:15px">
+          <!--          文章内容部分開始             -->
+          {{ article }}
+          <h1 class="title">{{ article.title }}</h1>
+          <p class="description">{{ article.author }}</p>
+          <p class="article">{{ article.body }}</p>
 
-                <el-row>
-                  <el-col :span="18" :offset="1" style="text-align: left;margin-top:5px;font-size:2rem">
-                    {{ article.title }}
-                  </el-col>
-                </el-row>
-                <el-row>
-                  <el-col :span="4" :offset="1" style="text-align: left;font-size:1rem">
-                    {{ article.author }}
-                  </el-col>
-                  <el-col :span="4" :offset="14" style="text-align: right">
-                    {{ formatDate(article.updated) }}
-                  </el-col>
-                </el-row>
-              </el-card>
-            </el-col>
-            <br/>
-          </el-row>
+    <Markdown :source="article.body" />
+
+
+          <!--          文章内容部分結束             -->
         </div>
       </el-col>
       <el-col :span="6">
@@ -37,31 +27,35 @@
       </el-col>
     </el-row>
   </el-container>
+
 </template>
 
 <script>
 import HeadNav from "../components/HeadNav.vue";
-import axios from 'axios'
+import axios from "axios";
+import Markdown from 'vue3-markdown-it';
 
 export default {
-  name: "blog",
+  name: "article",
   components: {
-    HeadNav
+    HeadNav,
+    Markdown
   },
   data() {
     return {
-      articles: []
+      article_id: this.$route.query.id,
+      article: {}
     };
   },
   mounted() {
-    this.get_article()
+    this.get_article_detail()
   },
   methods: {
-    get_article() {
-      axios.get(this.$apiUrl + "/blog/articles/")
+    get_article_detail() {
+      axios.get(this.$apiUrl + "/blog/article/" + this.article_id)
           .then(
               (response) => {
-                this.articles = response.data.data;
+                this.article = response.data.data;
               })
           .catch(err => console.log(err));
     },

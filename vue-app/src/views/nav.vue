@@ -129,12 +129,10 @@
 
 <script>
 import HeadNav from "../components/HeadNav.vue";
-import Search from "../components/search.vue";
 
 export default {
   name: "nav",
   components: {
-    Search,
     HeadNav,
   },
   data() {
